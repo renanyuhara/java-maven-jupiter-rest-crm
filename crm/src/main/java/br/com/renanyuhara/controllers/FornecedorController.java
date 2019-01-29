@@ -36,7 +36,7 @@ public class FornecedorController {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public FornecedorViewModel create(FornecedorViewModel fornecedor) {
+	public FornecedorViewModel create(FornecedorViewModel fornecedor) throws Exception {
 		return _fornecedorService.inserirFornecedor(fornecedor);
 	}
 	
@@ -44,7 +44,7 @@ public class FornecedorController {
 	@Path("/{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public FornecedorViewModel update(@PathParam("id") int id, FornecedorViewModel fornecedor) {
+	public FornecedorViewModel update(@PathParam("id") int id, FornecedorViewModel fornecedor) throws Exception {
 		return _fornecedorService.atualizarFornecedor(id, fornecedor);
 	}
 	

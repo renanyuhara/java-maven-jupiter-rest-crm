@@ -20,11 +20,17 @@ public class FornecedorManager {
 		return _fornecedorRepository.get(id);
 	}
 	
-	public FornecedorViewModel inserirFornecedor(FornecedorViewModel fornecedor) {
+	public FornecedorViewModel inserirFornecedor(FornecedorViewModel fornecedor) throws Exception {
+		if (fornecedor.getName().trim().equals("")) {
+			throw new Exception("Nome nao informado");
+		}
 		return _fornecedorRepository.insert(fornecedor);
 	}
 	
-	public FornecedorViewModel atualizarFornecedor(int id, FornecedorViewModel fornecedor) {
+	public FornecedorViewModel atualizarFornecedor(int id, FornecedorViewModel fornecedor) throws Exception {
+		if (fornecedor.getName().trim().equals("")) {
+			throw new Exception("Nome nao informado");
+		}
 		return _fornecedorRepository.update(id, fornecedor);
 	}
 	

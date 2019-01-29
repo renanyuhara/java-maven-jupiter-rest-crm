@@ -25,11 +25,11 @@ public class FornecedorService {
 		return _fornecedorManager.buscarFornecedor(id);
 	}
 	
-	public FornecedorViewModel inserirFornecedor(FornecedorViewModel fornecedor) {
+	public FornecedorViewModel inserirFornecedor(FornecedorViewModel fornecedor) throws Exception {
 		return _fornecedorManager.inserirFornecedor(fornecedor);
 	}
 	
-	public FornecedorViewModel atualizarFornecedor(int id, FornecedorViewModel fornecedor) {
+	public FornecedorViewModel atualizarFornecedor(int id, FornecedorViewModel fornecedor) throws Exception {
 		return _fornecedorManager.atualizarFornecedor(id, fornecedor);
 	}
 	

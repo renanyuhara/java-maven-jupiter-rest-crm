@@ -16,7 +16,7 @@ import br.com.renanyuhara.crm_viewmodel.FornecedorViewModel;
 public class FornecedorManagerTests {
 	@Test
 	@DisplayName("Listar todos os fornecedores deve trazer 1 registro")
-	void testar() {
+	void testar() throws Exception {
 		FornecedorManager manager = createFakeManager();
 		manager.inserirFornecedor(createFakeFornecedor());
 		List<FornecedorViewModel> lista = manager.listarTodosFornecedores();
@@ -33,7 +33,7 @@ public class FornecedorManagerTests {
 	
 	@Test
 	@DisplayName("Incluir deve trazer o registro com id 1.")
-	void incluirDeveTrazerRegitro1Test() {
+	void incluirDeveTrazerRegitro1Test() throws Exception {
 		FornecedorManager manager = createFakeManager();
 		manager.inserirFornecedor(createFakeFornecedor());
 		List<FornecedorViewModel> lista = manager.listarTodosFornecedores();
@@ -42,7 +42,7 @@ public class FornecedorManagerTests {
 	
 	@Test
 	@DisplayName("Alterar deve trazer o nome diferente para o mesmo id.")
-	void alterarDeveTrazerNomeDiferenteMesmoId() {
+	void alterarDeveTrazerNomeDiferenteMesmoId() throws Exception {
 		FornecedorManager manager = createFakeManager();
 		FornecedorViewModel fornecedorInsert = createFakeFornecedor();
 		String originalName = fornecedorInsert.getName();
@@ -57,7 +57,7 @@ public class FornecedorManagerTests {
 	
 	@Test
 	@DisplayName("Excluir deve remover apenas 1 item.")
-	void excluirDeveRemoverApenas1Item() {
+	void excluirDeveRemoverApenas1Item() throws Exception {
 		FornecedorManager manager = createFakeManager();
 		manager.inserirFornecedor(createFakeFornecedor());
 		int chosenId = manager.inserirFornecedor(createFakeFornecedor()).getId();
@@ -71,7 +71,7 @@ public class FornecedorManagerTests {
 	
 	@Test
 	@DisplayName("Buscar deve trazer o registro com id 2, nome YYYY e outros dados originais.")
-	void buscarDeveTrazerORegistroId2NomeYYYY() {
+	void buscarDeveTrazerORegistroId2NomeYYYY() throws Exception {
 		FornecedorManager manager = createFakeManager();
 		manager.inserirFornecedor(createFakeFornecedor());
 		
